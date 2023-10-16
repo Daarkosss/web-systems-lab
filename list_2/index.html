@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Prezentacja miasta Wrocław">
@@ -7,18 +8,50 @@
     <meta name="author" content="Karol Piłat, Michał Pesta">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prezentacja Wrocławia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #introduction {
+            text-align: center;
+            margin-inline: 20px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-text {
+            font-size: 14px;
+        }
+
+        .right-align {
+            float: right;
+        }
+    </style>
 </head>
 
-<body style="overflow-y: scroll;">
-    <h1 id="introduction" style="text-align: center; margin-inline: 20px;">
+<body>
+    <h1 id="introduction">
         <span>&#9829;</span>
         <strong>Witaj we Wrocławiu</strong>
         <span>&#9829;</span>
     </h1>
 
-    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <h2>Nawigacja</h2>
+    <ul>
+        <li>
+            <p> <a href="restaurants_pubs.html">Restauracje i bary we Wrocławiu</a> </p>
+        </li>
+    </ul>
+
+    <div class="flex-container">
         <img src="images/ostrow_tumski.png" alt="Ostrów Tumski">
-        <p style="font-size: 14px;">Ostrów Tumski</p>
+        <p class="info-text">Ostrów Tumski</p>
 
         <h2>Podstawowe informacje</h2>
         <p>Wrocław - miasto w południowo-zachodniej Polsce, nad rzeką Odrą.</p>
@@ -52,81 +85,9 @@
         </li>
     </ol>
 
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Nagłówek 1</th>
-                <th>Nagłówek 2</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Dane 1</td>
-                <td colspan="2">Dane połączone 2</td>
-            </tr>
-            <tr>
-                <td rowspan="2">Dane połączone 1</td>
-                <td>Dane 2</td>
-            </tr>
-            <tr>
-                <!-- Tabela w tabeli -->
-                <td>
-                    <table>
-                        <tr>
-                            <td>Wewnętrzne dane 1</td>
-                        </tr>
-                        <tr>
-                            <td>Wewnętrzne dane 2</td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <h2>Skontaktuj się z nami!</h2>
+    <a href="mailto:266520@student.pwr.edu.pl">Wyślij email do Karol Piłat</a><br>
+    <a href="mailto:266899@student.pwr.edu.pl">Wyślij email do Michał Pesta</a><br>
+</body>
 
-
-    <a href="https://www.example.com">Przykładowy link</a>
-
-    <a href="#etykieta">Przejdź do etykiety</a>
-
-    <a href="plik.zip" download>Ściągnij plik</a>
-
-    <a href="mailto:example@email.com">Wyślij email</a>
-
-    <a href="https://www.example.com"><img src="obrazek_link.jpg" alt="Opis obrazka-linka"></a>
-
-    <div id="etykieta">
-        To jest treść etykiety.
-    </div>
-
-    <form action="adres_serwera.php" method="post">
-        <input type="text" name="imie" placeholder="Wpisz swoje imię">
-
-        <select name="miasto">
-            <optgroup label="Duże miasta">
-                <option value="wroclaw">Wrocław</option>
-                <option value="krakow">Kraków</option>
-            </optgroup>
-            <optgroup label="Małe miasta">
-                <option value="olsztyn">Olsztyn</option>
-                <option value="rzeszow">Rzeszów</option>
-            </optgroup>
-        </select>
-
-        <input type="radio" name="plec" value="mezczyzna" id="mezczyzna">
-        <label for="mezczyzna">Mężczyzna</label>
-        <input type="radio" name="plec" value="kobieta" id="kobieta">
-        <label for="kobieta">Kobieta</label>
-
-        <input type="checkbox" name="zainteresowania" value="sport" id="sport">
-        <label for="sport">Sport</label>
-        <input type="checkbox" name="zainteresowania" value="muzyka" id="muzyka">
-        <label for="muzyka">Muzyka</label>
-
-        <textarea name="komentarz" rows="4" cols="50" maxlength="200" placeholder="Wpisz swój komentarz"></textarea>
-
-        <input type="reset" value="Wyczyść">
-        <input type="submit" value="Wyślij">
-    </form>
-</body >
 </html>
