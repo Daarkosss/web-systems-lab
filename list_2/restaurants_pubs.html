@@ -32,6 +32,15 @@
             margin-bottom: 20px;
         }
 
+        img {
+            width: 200px;
+        }
+
+        table td { /* styl dla komórek zagnieżdżonej tabeli */
+            border: 1px solid #000; /* Obramowanie komórek */
+            padding: 5px; /* Wewnętrzne marginesy komórek */
+        }
+
         .place {
             margin-bottom: 20px;
         }
@@ -60,38 +69,91 @@
 
     <div class="container">
 
-        <section id="restaurants">
-            <h3>Restauracje</h3>
-
-            <div class="place">
-                <h4>Restauracja Przykład 1</h4>
-                <p>Opis: Tradycyjna polska kuchnia w nowoczesnym wydaniu.</p>
-                <p>Lokalizacja: ul. Przykładowa 1, Wrocław</p>
-            </div>
-
-            <div class="place">
-                <h4>Restauracja Przykład 2</h4>
-                <p>Opis: Kuchnia wegańska i wegetariańska.</p>
-                <p>Lokalizacja: ul. Przykładowa 2, Wrocław</p>
-            </div>
-        </section>
-
-        <section id="bars">
-            <h3>Bary</h3>
-
-            <div class="place">
-                <h4>Bar Przykład 1</h4>
-                <p>Opis: Klimatyczny bar z szerokim wyborem drinków.</p>
-                <p>Lokalizacja: ul. Przykładowa 3, Wrocław</p>
-            </div>
-
-            <div class="place">
-                <h4>Bar Przykład 2</h4>
-                <p>Opis: Bar kawowy z najlepszą kawą w mieście.</p>
-                <p>Lokalizacja: ul. Przykładowa 4, Wrocław</p>
-            </div>
-        </section>
-
+        <table border="1" cellpadding="10" cellspacing="0">
+            <!-- Wiersze nagłówkowe -->
+            <thead>
+                <tr>
+                    <th colspan="2">Zdjęcie</th>
+                    <th>Nazwa restauracji</th>
+                    <th>Adres</th>
+                    <th>Rodzaj kuchni</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dane dla restauracji 1 -->
+                <tr>
+                    <td rowspan="2">
+                        <a href="https://pastamia.com.pl/"> <img src="images/pasta_mia.png" alt="Pasta mia"> </a>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>Makarony</td>
+                            </tr>
+                            <tr>
+                                <td>Owoce morza</td>
+                            </tr>
+                            <tr>
+                                <td>Wina</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>Pasta mia!</td>
+                    <td>Rynek 53/55</td>
+                    <td>Włoska</td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: center;">Wybitne makarony</td>
+                </tr>
+        
+                <!-- Dane dla restauracji 2 -->
+                <tr>
+                    <td rowspan="2">
+                        <a href="https://panczo.pl/"> <img src="images/panczo.png" alt="Panczo"> </a>
+                    </td>                    
+                    <td>
+                        <table>
+                            <tr>
+                                <td>Burrito</td>
+                            </tr>
+                            <tr>
+                                <td>Tacos</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>Panczo</td>
+                    <td>ul. Świętego Antoniego 35/1a</td>
+                    <td>Meksykańska</td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: center;">Najlepsze dania kuchni meksykańskiej</td>
+                </tr>
+        
+                <tr>
+                    <td rowspan="2">
+                        <a href="https://www.pintawroclaw.pl/"> <img src="images/pinta.png" alt="Pinta Wrocławska"> </a>
+                    </td>                      
+                    <td>
+                        <table>
+                            <tr>
+                                <td>Piwa kraftowe</td>
+                            </tr>
+                            <tr>
+                                <td>Żeberka</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>Pinta Wrocławska</td>
+                    <td>ul. Podwale 83</td>
+                    <td>Polska</td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: center;">Najlepszy wybór piw kraftowych we Wrocławiu -
+                        <a href="https://browarpinta.pl/wp-content/uploads/2023/06/menu_pinta_wroclaw.pdf">Menu</a> 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </body>
