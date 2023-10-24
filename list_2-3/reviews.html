@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kominikat o przesłanej ocenie">
-    <meta name="keywords" content="Wrocław, ocena, recenzja">
-    <link rel="stylesheet" href="rate_us_styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kominikat o przesłanej ocenie" />
+    <meta name="keywords" content="Wrocław, ocena, recenzja" />
+    <link rel="stylesheet" href="rate_us_styles.css" />
     <title>Dziękujemy za opinię!</title>
     <style>
-        body{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-image: url(images/wro_bg.jpg);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            background-attachment: fixed;
-        }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(images/wro_bg.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+      }
     </style>
-</head>
-<body>
-    <div style="background-color: rgba(220, 220, 220, 0.7); display: flex; flex-direction: column; justify-items: center; align-items: center; padding: 5px;">
-        <h1>Dziękujemy za przesłanie opini!</h1>
-        <a href="index.html">Strona główna</a>
+  </head>
+  <body>
+    <div
+      style="
+        background-color: rgba(220, 220, 220, 0.7);
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        padding: 5px;
+      "
+    >
+      <h1>Dziękujemy za przesłanie opini!</h1>
+      <label for="total_reviews">Wszystkie opinie:</label>
+      <meter id="total_reviews" value="6" min="0" max="10"></meter><br />
+      <a href="index.html">Strona główna</a>
     </div>
-</body>
+  </body>
 </html>

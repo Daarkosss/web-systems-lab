@@ -1,97 +1,112 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Umożliwia ocenę strony związanej z miastem Wrocław">
-    <meta name="keywords" content="Wrocław, ocena, recenzja">
-    <link rel="stylesheet" href="rate_us_styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Umożliwia ocenę strony związanej z miastem Wrocław"
+    />
+    <meta name="keywords" content="Wrocław, ocena, recenzja" />
+    <link rel="stylesheet" href="rate_us_styles.css" />
     <title>Oceń nas!</title>
     <style>
-        body{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-image: url(images/wro_bg.jpg);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            background-attachment: fixed;
-        }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(images/wro_bg.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="return_btn">
-        <a href="index.html">Strona główna</a>
+      <a href="index.html">Strona główna</a>
     </div>
     <div id="main_content">
-        <h1>Wystaw nam opinię!</h1>
-        <form action="reviews.html" method="get">
-            <label for="first_name"></label>
-            <input type="text" id="first_name" name="first_name" placeholder="Imię">
-            <label for="last_name"></label>
-            <input type="text" id="last_name" name="last_name" placeholder="Nazwisko">
-            <br>
-            <br>
-            <label for="title">Tytuł</label>
-            <select name="title" id="title">
-                <option value="Mr">
-                    Pan
-                </option>
-                <option value="Mrs">
-                    Pani
-                </option>   
-            </select>
-            <br>
-            <h4>Ocena</h4>
-            <div id="stars_container">
-                <span>&#11088;</span>
-                <span>&#11088;</span>
-                <span>&#11088;</span>
-                <span>&#11088;</span>
-                <span>&#11088;</span>
-            </div>
-           
-            <div id="radio_container">
-                <div>
-                    <label for="one_star">1</label>
-                    <input id="one_star" type="radio" name="rating" value="1">
-                </div>
-                <div>
-                    <label for="two_stars">2</label>
-                    <input id="two_stars" type="radio" name="rating" value="2">
-                </div>
-                <div>
-                    <label for="three_stars">3</label>
-                    <input id="three_stars" type="radio" name="rating" value="3">
-                </div>
-                <div>
-                    <label for="four_stars">4</label>
-                    <input id="four_stars" type="radio" name="rating" value="4">  
-                </div>
-                <div>
-                    <label for="five_stars">5</label>
-                    <input id="five_stars" type="radio" name="rating" value="5">
-                </div>
-                </div>
-                
-                <h4>Co ci się podobało?</h4>
-                <div id="checkbox_container">
-                    <label for="design">Wygląd</label>
-                    <input type="checkbox" id="design" name="design">
-                    <label for="a11y">Dostępność</label>
-                    <input type="checkbox" id="a11y" name="a11y">
-                    <label for="info">Informacje</label>
-                    <input type="checkbox" id="info" name="info">
-                </div>
-    
-                <h4>Komentarz</h4>
-                <textarea name="comment" id="comment" cols="43" rows="10" maxlength="200"></textarea>
-                <div>
-                    <input type="submit">
-                    <input type="reset">
-                </div>
-        </form>
+      <h1>Wystaw nam opinię!</h1>
+      <form action="reviews.html" method="get">
+        <label for="first_name"></label>
+        <input
+          type="text"
+          id="first_name"
+          name="first_name"
+          placeholder="Imię"
+        />
+        <label for="last_name"></label>
+        <input
+          type="text"
+          id="last_name"
+          name="last_name"
+          placeholder="Nazwisko"
+        />
+        <br />
+        <br />
+        <label for="title">Tytuł</label>
+        <select name="title" id="title">
+          <option value="Mr">Pan</option>
+          <option value="Mrs">Pani</option>
+        </select>
+        <br />
+        <h4>Ocena</h4>
+        <div id="stars_container">
+          <span>&#11088;</span>
+          <span>&#11088;</span>
+          <span>&#11088;</span>
+          <span>&#11088;</span>
+          <span>&#11088;</span>
+        </div>
+
+        <div id="radio_container">
+          <div>
+            <label for="one_star">1</label>
+            <input id="one_star" type="radio" name="rating" value="1" />
+          </div>
+          <div>
+            <label for="two_stars">2</label>
+            <input id="two_stars" type="radio" name="rating" value="2" />
+          </div>
+          <div>
+            <label for="three_stars">3</label>
+            <input id="three_stars" type="radio" name="rating" value="3" />
+          </div>
+          <div>
+            <label for="four_stars">4</label>
+            <input id="four_stars" type="radio" name="rating" value="4" />
+          </div>
+          <div>
+            <label for="five_stars">5</label>
+            <input id="five_stars" type="radio" name="rating" value="5" />
+          </div>
+        </div>
+
+        <h4>Co ci się <mark>podobało?</mark></h4>
+        <div id="checkbox_container">
+          <label for="design">Wygląd</label>
+          <input type="checkbox" id="design" name="design" />
+          <label for="a11y">Dostępność</label>
+          <input type="checkbox" id="a11y" name="a11y" />
+          <label for="info">Informacje</label>
+          <input type="checkbox" id="info" name="info" />
+        </div>
+
+        <h4>Komentarz</h4>
+        <textarea
+          name="comment"
+          id="comment"
+          cols="43"
+          rows="10"
+          maxlength="200"
+        ></textarea>
+        <div>
+          <input type="submit" />
+          <input type="reset" />
+        </div>
+      </form>
     </div>
-</body>
+  </body>
 </html>

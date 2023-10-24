@@ -1,90 +1,139 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formularz osobowy</title>
     <style>
-        .form-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 90vh;
-        }
+      .form-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+      }
 
-        .form-filler {
-            margin-top: 5vh;
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-            gap: 10px;
-            align-items: center;
-        }
+      .form-filler {
+        margin-top: 5vh;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 10px;
+        align-items: center;
+      }
 
-        label {
-            text-align: right;
-            margin-right: 10px;
-        }
+      label {
+        text-align: right;
+        margin-right: 10px;
+      }
 
-        .button-send {
-            display: block;
-            margin: 20px auto;
-        }
+      .button-send {
+        display: block;
+        margin: 20px auto;
+      }
+      #details {
+        display: block;
+        width: 400px;
+      }
+      aside {
+        position: absolute;
+        right: 5rem;
+        width: auto;
+        padding: 15px;
+        float: right;
+        font-style: italic;
+        background-color: lightgray;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <nav>
-        <h3> <a href="index.html">Strona główna</a> </h3>
+      <h3><a href="index.html">Strona główna</a></h3>
     </nav>
 
     <div class="form-wrapper">
-        <h1>Chcesz nam pomóc?</h1>
-        <h3>Znasz ciekawe miejsca we Wrocławiu i wiesz jak udoskonalić naszą witrynę?</h3>
-        <h2>Wypełnij formularz osobowy - skontaktujemy się z tobą!</h2>
+      <h1>Chcesz nam pomóc?</h1>
+      <h3>
+        Znasz ciekawe miejsca we <mark>Wrocławiu</mark> i wiesz jak udoskonalić
+        naszą witrynę?
+      </h3>
+      <details id="details">
+        <summary>Więcej...</summary>
+        <p>
+          Przed wysłaniem zgłoszenia proszę zapoznać się z aktualną zawartością
+          strony i sprawdzić czy takie miejsce już sie na niej nie znajduje.
+          Kontaktować będziemy się z Państwem między godziną 9:00 a 15:00 od
+          poniedziałku do piątku.
+        </p>
+      </details>
+      <h2>Wypełnij formularz osobowy - skontaktujemy się z tobą!</h2>
+      <aside>
+        <h4>Dzięki Wam strona nieustannie się rozwija! Dziękujemy!</h4>
+      </aside>
+      <form action="#" method="post">
+        <div class="form-filler">
+          <label for="fname">Imię:</label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            autocomplete="given-name"
+            autofocus
+          />
+          <span>Format: Jan</span>
 
-        <form action="#" method="post">
-            <div class="form-filler">
-                <label for="fname">Imię:</label>
-                <input type="text" id="fname" name="fname" autocomplete="given-name" autofocus>
-                <span>Format: Jan</span>
-        
-                <label for="lname">Nazwisko:</label>
-                <input type="text" id="lname" name="lname" autocomplete="family-name" required>
-                <span>Format: Kowalski</span>
-        
-                <label for="bmonth">Miesiąc urodzin:</label>
-                <input list="months" id="bmonth" name="bmonth">
-                <datalist id="months">
-                    <option value="Styczeń">
-                    <option value="Luty">
-                    <option value="Marzec">
-                    <option value="Kwiecień">
-                    <option value="Maj">
-                    <option value="Czerwiec">
-                    <option value="Lipiec">
-                    <option value="Sierpień">
-                    <option value="Wrzesień">
-                    <option value="Październik">
-                    <option value="Listopad">
-                    <option value="Grudzień">
-                </datalist>
-                <span>Wybierz z listy</span>
-        
-                <label for="email">Adres mailowy:</label>
-                <input type="email" id="email" name="email" autocomplete="email" required>
-                <span>Format: jan.kowalski@example.com</span>
-        
-                <label for="phone">Telefon:</label>
-                <input type="tel" id="phone" name="phone" pattern="\+\d{2} \d{3}-\d{3}-\d{3}" autocomplete="tel">
-                <span>Format: +XX XXX-XXX-XXX</span>
-            </div>
-    
-            <input class="button-send" type="submit" value="Wyślij">
-        </form>    
+          <label for="lname">Nazwisko:</label>
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            autocomplete="family-name"
+            required
+          />
+          <span>Format: Kowalski</span>
+
+          <label for="bmonth">Miesiąc urodzin:</label>
+          <input list="months" id="bmonth" name="bmonth" />
+          <datalist id="months">
+            <option value="Styczeń"></option>
+            <option value="Luty"></option>
+            <option value="Marzec"></option>
+            <option value="Kwiecień"></option>
+            <option value="Maj"></option>
+            <option value="Czerwiec"></option>
+            <option value="Lipiec"></option>
+            <option value="Sierpień"></option>
+            <option value="Wrzesień"></option>
+            <option value="Październik"></option>
+            <option value="Listopad"></option>
+            <option value="Grudzień"></option>
+          </datalist>
+
+          <span>Wybierz z listy</span>
+
+          <label for="email">Adres mailowy:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+          />
+          <span>Format: jan.kowalski@example.com</span>
+
+          <label for="phone">Telefon:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="\+\d{2} \d{3}-\d{3}-\d{3}"
+            autocomplete="tel"
+          />
+          <span>Format: +XX XXX-XXX-XXX</span>
+        </div>
+
+        <input class="button-send" type="submit" value="Wyślij" />
+      </form>
     </div>
-</body>
-
+  </body>
 </html>
